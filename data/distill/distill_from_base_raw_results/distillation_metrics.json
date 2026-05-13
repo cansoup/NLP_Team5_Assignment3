@@ -1,0 +1,47 @@
+{
+  "experiment_name": "distill_from_base_raw",
+  "teacher_model": "facebook/bart-large-cnn",
+  "student_model": "sshleifer/distilbart-cnn-12-6",
+  "temperature": 2.0,
+  "alpha": 0.5,
+  "num_epochs": 2,
+  "trained_on_ablation": "raw",
+  "validation_rouge": {
+    "rouge1": 0.20834224624624736,
+    "rouge2": 0.06819309160810381,
+    "rougeL": 0.1546293809638843,
+    "rougeLsum": 0.15563191479627786
+  },
+  "test_rouge": {
+    "rouge1": 0.19832329032312698,
+    "rouge2": 0.06842867596506519,
+    "rougeL": 0.1545356010333101,
+    "rougeLsum": 0.15523366894031781
+  },
+  "ablation_rouge": {
+    "raw": {
+      "rouge1": 0.19832329032312698,
+      "rouge2": 0.06842867596506519,
+      "rougeL": 0.1545356010333101,
+      "rougeLsum": 0.15523366894031781
+    },
+    "coref": {
+      "rouge1": 0.19381529888957186,
+      "rouge2": 0.06427626028722958,
+      "rougeL": 0.15167108549924985,
+      "rougeLsum": 0.15222694379381566
+    },
+    "textrank": {
+      "rouge1": 0.1974845721414214,
+      "rouge2": 0.06355456487660743,
+      "rougeL": 0.152159143444664,
+      "rougeLsum": 0.1525760342665283
+    },
+    "coref+tr": {
+      "rouge1": 0.19392199210973893,
+      "rouge2": 0.061859665160784325,
+      "rougeL": 0.15284220007605848,
+      "rougeLsum": 0.15317441669877657
+    }
+  }
+}
